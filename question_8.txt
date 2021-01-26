@@ -1,0 +1,50 @@
+8) 
+What are traits? why do we use? give any one example.
+
+
+ANS
+) 
+
+A trait is a group of methods that can be inserted into classes. They were added in PHP 5.4 to enable greater code reuse without the added complexity that comes frosm allowing multiple inheritance. Traits are defined with the trait keyword, followed by a name and a code block. The naming convention is commonly the same as for classes, with each word initially capitalized. The code block may only contain static and instance methods.
+
+trait PrintFunctionality
+{
+	public function myPrint() { echo 'Hello'; }
+}
+
+
+Classes that need the functionality that a trait provides can include it with the use keyword, followed by the trait’s name. The trait’s methods then behave as if they were directly defined in that class
+
+class MyClass
+{
+  // Insert trait methods
+  use PrintFunctionality;
+}
+$o = new MyClass();
+$o->myPrint(); // "Hello"
+
+
+A class may use multiple traits by placing them in a comma-separated list. Similarly, a trait may be composed of one or more other traits.
+
+
+
+Trait methods override inherited methods. Likewise, methods defined in the class override methods inserted by a trait.
+
+
+
+
+class MyParent
+{
+	 public function myPrint() 
+ 	 {
+		 echo 'Base'; 
+	 }
+}
+class MyChild extends MyParent
+{
+ 	// Overrides inherited method
+        use PrintFunctionality;
+	// Overrides trait inserted method
+	ublic function myPrint() { echo 'Child'; }
+}
+$o = new MyChild();$o->myPrint(); // "Child"
