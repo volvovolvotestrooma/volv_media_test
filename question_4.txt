@@ -1,0 +1,14 @@
+1) what is the difference between == & === operators
+
+Ans) 
+	==    Checks for equality between two arguments performing type conversion when necessary:
+		1 == "1" results in true
+		1 == 1 results in true
+
+
+	===  Identical to               Same as == but the types of the operands have to match.
+		 No automatic type conver-sions are performed:
+		1 === "1" results in false.
+		1 === 1 results in true.
+
+
