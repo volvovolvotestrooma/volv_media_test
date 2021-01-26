@@ -1,0 +1,15 @@
+
+11) Why do we use LIKE operator when we have where clause in SQL?
+
+Ans) 
+
+The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
+
+% - The percent sign represents zero, one, or multiple characters
+_ - The underscore represents a single character
+
+[] Any single character search with the specified pattern
+
+[^] Any single character search not within the specified range
+
+

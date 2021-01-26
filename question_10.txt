@@ -1,0 +1,22 @@
+10  What architecture does laravel use? How does it work?
+
+Ans) 
+
+
+Laravel is an MVC framework for the development of modern web applications
+
+It is a software architecture standard that separates the representation of information from users' interaction with it.
+
+ a simple web application about books, with a search input field. When the user types a book name and presses Enter, the following flow cycle will occur:
+
+View 
+|
+Request 
+|
+Router
+|
+Controller  -> View   -> request 
+||
+Model 
+
+
