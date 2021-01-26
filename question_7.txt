@@ -1,0 +1,23 @@
+7) How do you export the database from your local machine & import into someone else's machine? Explain the process step by step.
+
+Ans)  
+
+#export to file 
+mysqldump -u my_username -p database_name > output_file_path.sql
+-u and -p flags are required for authentication
+which is then followed by the name of the database to import into 
+
+
+#copy file  machine to other 
+	scp localmachine/path_to_the_file username@server_ip:/path_to_remote_directory
+	or synchronize existnig file  
+	rsync -rvc -e ssh -p 3310  --progress  /home/user/Downloads/testfeed.sql  user@ip:/tmp/
+
+
+#Importing to file 
+ mysqlimport -u book_admin -p books_production ~/backup/database/books.sql
+	-u and -p flags are required for authentication
+	which is then followed by the name of the database to import into 
+
+
+
