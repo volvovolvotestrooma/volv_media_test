@@ -13,3 +13,12 @@
 	Manual test backup 
 		php artisan backup:run  --only-db
 
+	shedules in this 
+		$schedule->command('backup:run --only-db')->dailyAt('01:35');
+		app/Console/Kernel.php 
+
+
+
+
+	need to set this in cron 
+	* * * * * php Blog/artisan schedule:run >> /dev/null 2>&1
