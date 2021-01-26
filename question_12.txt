@@ -1,0 +1,7 @@
+12.
+	Prepare SQL query such that there is a user table with column "grades". You have to find out the user records from users table where user have got grades in this pattern (1,3) or (1,3,2) etc.
+
+	Note: Sequence of numbers matters in this pattern
+
+Ans)
+	select *from user  where grade like "1,3%";
